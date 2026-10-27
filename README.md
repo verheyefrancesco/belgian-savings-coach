@@ -25,6 +25,9 @@ skills/                    # één map per besparingsdomein
   <domein>-savings-coach/
     SKILL.md               # frontmatter + instructies (verplicht)
     references/            # optioneel: achtergrondinfo die de skill kan inladen
+context/                   # gedeelde algemene info, één map per domein
+  telecom/
+    providers.md           # telecomaanbieders actief in België
 templates/
   SKILL.template.md        # vertrekpunt voor een nieuwe skill
 scripts/

@@ -19,6 +19,8 @@ Er is (nog) geen applicatiecode: de "code" zijn de skill-instructies in Markdown
   kebab-case, eindigt op `-savings-coach`) en `description` (wanneer Claude de
   skill gebruikt). Een skill blijft binnen zijn eigen domein.
   Optioneel `references/` voor achtergrondinfo die de skill kan inladen.
+- `context/<domein>/`: gecentraliseerde algemene info die skills delen (bv.
+  `context/telecom/providers.md`). Afspraken staan in `context/README.md`.
 - `templates/SKILL.template.md`: vertrekpunt voor een nieuwe skill.
 - `scripts/validate_skills.py`: valideert de frontmatter van alle skills.
 - `.claude/skills` is een symlink naar `skills/`, zodat Claude Code de skills in
