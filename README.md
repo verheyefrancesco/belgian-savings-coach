@@ -30,6 +30,8 @@ context/                   # gedeelde algemene info, één map per domein
   telecom/
     providers.md           # telecomaanbieders actief in België
     affiliate-links.md     # actieve affiliatelinks (leeg zolang er geen programma loopt)
+distribution/
+  chatgpt/                 # Custom GPT-versie: instructietekst + handleiding
 templates/
   SKILL.template.md        # vertrekpunt voor een nieuwe skill
 scripts/
@@ -44,6 +46,8 @@ scripts/
 - **Claude.ai / Claude-app:** zip de map van een skill (bv.
   `skills/telecom-savings-coach/`) en upload hem bij *Settings → Capabilities → Skills*.
 - **Persoonlijk in Claude Code:** kopieer de map naar `~/.claude/skills/`.
+- **ChatGPT (Custom GPT):** deel de coach met consumenten via één link; zie
+  [`distribution/chatgpt/`](distribution/chatgpt/README.md).
 
 ## Een nieuwe skill toevoegen
 

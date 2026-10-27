@@ -24,6 +24,10 @@ Er is (nog) geen applicatiecode: de "code" zijn de skill-instructies in Markdown
   Een skill gebruikt context via een symlink in zijn `references/` (bv.
   `skills/telecom-savings-coach/references/providers.md`), zodat er één bron is
   en het bestand mee in de zip zit bij uploaden. De validatie faalt op kapotte links.
+- `distribution/chatgpt/`: Custom GPT-versie van de skills voor consumenten:
+  per skill een `<naam>-instructions.md` (max. 8.000 tekens, de kern van de skill)
+  plus een handleiding. Wijzig je de werkwijze van een skill, werk dan ook die
+  instructietekst bij.
 - `templates/SKILL.template.md`: vertrekpunt voor een nieuwe skill.
 - `scripts/validate_skills.py`: valideert de frontmatter van alle skills.
 - `.claude/skills` is een symlink naar `skills/`, zodat Claude Code de skills in

@@ -8,6 +8,8 @@ Checks the YAML frontmatter that Claude needs to load a skill:
 - `description` is present and at most 1024 characters
 - the body below the frontmatter is not empty
 - every symlink inside the skill folder (e.g. into context/) resolves
+- every ChatGPT instructions file in distribution/chatgpt/ fits the
+  8000-character limit of the Custom GPT "Instructions" field
 
 Uses only the standard library so it runs without installing anything.
 Exit code 0 means all skills are valid.
@@ -17,11 +19,14 @@ import re
 import sys
 from pathlib import Path
 
-SKILLS_DIR = Path(__file__).resolve().parent.parent / "skills"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SKILLS_DIR = ROOT_DIR / "skills"
+CHATGPT_DIR = ROOT_DIR / "distribution" / "chatgpt"
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 NAME_SUFFIX = "-savings-coach"
 MAX_NAME_LENGTH = 64
 MAX_DESCRIPTION_LENGTH = 1024
+MAX_GPT_INSTRUCTIONS_LENGTH = 8000
 
 
 def parse_frontmatter(text):
@@ -84,6 +89,16 @@ def validate_skill(skill_file):
     return errors
 
 
+def validate_gpt_instructions():
+    """Return error messages for ChatGPT instructions files that are too long."""
+    errors = []
+    for path in sorted(CHATGPT_DIR.glob("*-instructions.md")):
+        length = len(path.read_text(encoding="utf-8"))
+        if length > MAX_GPT_INSTRUCTIONS_LENGTH:
+            errors.append(f"{path.name} has {length} characters (max {MAX_GPT_INSTRUCTIONS_LENGTH})")
+    return errors
+
+
 def main():
     skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
     if not skill_dirs:
@@ -100,6 +115,10 @@ def main():
                 print(f"FAIL {skill_dir.name}: {error}")
         else:
             print(f"ok   {skill_dir.name}")
+
+    for error in validate_gpt_instructions():
+        failed = True
+        print(f"FAIL chatgpt: {error}")
     return 1 if failed else 0
 
 
