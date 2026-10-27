@@ -13,8 +13,11 @@ Er is (nog) geen applicatiecode: de "code" zijn de skill-instructies in Markdown
 
 ## Mappenstructuur
 
-- `skills/<naam>/SKILL.md`: één map per skill. Frontmatter met `name` (gelijk aan
-  de mapnaam, kebab-case) en `description` (wanneer Claude de skill gebruikt).
+- `skills/<domein>-savings-coach/SKILL.md`: één skill per besparingsdomein, bv.
+  `telecom-savings-coach` (bestaat), later `energy-savings-coach`,
+  `insurance-savings-coach`. Frontmatter met `name` (gelijk aan de mapnaam,
+  kebab-case, eindigt op `-savings-coach`) en `description` (wanneer Claude de
+  skill gebruikt). Een skill blijft binnen zijn eigen domein.
   Optioneel `references/` voor achtergrondinfo die de skill kan inladen.
 - `context/<domein>/`: gecentraliseerde algemene info die skills delen (bv.
   `context/telecom/providers.md`). Afspraken staan in `context/README.md`.

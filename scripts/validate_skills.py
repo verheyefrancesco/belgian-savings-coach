@@ -4,6 +4,7 @@
 Checks the YAML frontmatter that Claude needs to load a skill:
 - the file starts with a frontmatter block delimited by '---'
 - `name` is present, kebab-case, at most 64 characters and matches the folder name
+- `name` follows the repo convention `<domain>-savings-coach`
 - `description` is present and at most 1024 characters
 - the body below the frontmatter is not empty
 
@@ -17,6 +18,7 @@ from pathlib import Path
 
 SKILLS_DIR = Path(__file__).resolve().parent.parent / "skills"
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+NAME_SUFFIX = "-savings-coach"
 MAX_NAME_LENGTH = 64
 MAX_DESCRIPTION_LENGTH = 1024
 
@@ -62,6 +64,8 @@ def validate_skill(skill_file):
             errors.append(f"name {name!r} must be kebab-case (a-z, 0-9, '-')")
         if len(name) > MAX_NAME_LENGTH:
             errors.append(f"name is longer than {MAX_NAME_LENGTH} characters")
+        if not name.endswith(NAME_SUFFIX) or name == NAME_SUFFIX[1:]:
+            errors.append(f"name {name!r} must follow '<domain>{NAME_SUFFIX}'")
         if name != folder:
             errors.append(f"name {name!r} does not match folder {folder!r}")
 
