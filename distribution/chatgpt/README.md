@@ -3,6 +3,13 @@
 Zo zet je de telecomcoach op als Custom GPT, zodat consumenten hem met één link
 kunnen gebruiken, zonder een prompt te kopiëren.
 
+> **Let op (stand 27/10/2026):** volgens meerdere berichten stopt OpenAI op
+> 11/12/2026 met Custom GPTs en vervangt het ze door *plugins*; bestaande GPTs
+> zijn dan om te zetten via *My GPTs → Migrate to plugin* (instructies worden een
+> skill, knowledge-bestanden gaan mee, deelinstellingen niet). Controleer de
+> actuele situatie in de OpenAI Help Center voor je hier tijd in steekt.
+> Een GPT *maken* vraagt een betaald abonnement; *gebruiken* kan gratis.
+
 > De schermen van ChatGPT veranderen geregeld. Heten knoppen anders, zoek dan
 > naar de equivalenten: *Instructions*, *Knowledge*, *Capabilities* en *Share*.
 
