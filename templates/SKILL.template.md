@@ -47,3 +47,20 @@ The compact, bilingual report format for this domain.
 - Never ask for passwords, customer numbers, national register numbers or full invoices.
 - No personalised investment or tax advice; refer to an authorised professional.
 - Disclose any affiliate or commercial relationship and never let it determine the ranking.
+
+## Affiliate links and disclosure
+
+Copy the section of the same name from `skills/telecom-savings-coach/SKILL.md`
+and point it at `references/affiliate-links.md` (a symlink to
+`context/<domain>/affiliate-links.md`). In short: rank first and add links
+afterwards, always show the official link too, copy affiliate URLs exactly,
+add a disclosure sentence in every response with an affiliate link, and never
+state commission amounts.
+
+<!--
+Check the regulation of your domain before adding any affiliate link. Referring
+customers to insurers or lenders for a fee can count as regulated intermediation
+in Belgium (FSMA registration); energy price comparison has its own CREG rules.
+Without that check, leave the affiliate-links file empty.
+-->
+

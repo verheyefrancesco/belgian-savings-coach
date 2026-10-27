@@ -29,6 +29,7 @@ skills/                    # één map per besparingsdomein
 context/                   # gedeelde algemene info, één map per domein
   telecom/
     providers.md           # telecomaanbieders actief in België
+    affiliate-links.md     # actieve affiliatelinks (leeg zolang er geen programma loopt)
 templates/
   SKILL.template.md        # vertrekpunt voor een nieuwe skill
 scripts/
@@ -55,6 +56,19 @@ scripts/
    aannames expliciet, geen gevoelige persoonsgegevens vragen, onafhankelijk advies.
 4. Controleer met `python3 scripts/validate_skills.py`.
 5. Voeg de skill toe aan de tabel hierboven.
+
+## Affiliatelinks
+
+Een skill mag affiliatelinks tonen, maar het advies blijft onafhankelijk. Elke
+skill rangschikt eerst zonder naar de links te kijken, toont daarna naast de
+officiële link eventueel een affiliatelink en meldt dat altijd in het antwoord.
+De links staan per domein in `context/<domein>/affiliate-links.md`, zonder
+commissiebedragen. Een programma toevoegen = een rij in dat bestand.
+
+Laat vooraf nakijken wat de regels zijn: transparantie is verplicht (Wetboek
+van economisch recht), doorverwijzen naar verzekeraars of kredietgevers tegen
+vergoeding kan gereglementeerde bemiddeling zijn (FSMA), en bij terugkerende
+inkomsten ben je wellicht zelfstandige in bijberoep.
 
 ## Controleren
 
