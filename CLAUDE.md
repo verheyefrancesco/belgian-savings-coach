@@ -16,6 +16,8 @@ Er is (nog) geen applicatiecode: de "code" zijn de skill-instructies in Markdown
 - `skills/<naam>/SKILL.md`: één map per skill. Frontmatter met `name` (gelijk aan
   de mapnaam, kebab-case) en `description` (wanneer Claude de skill gebruikt).
   Optioneel `references/` voor achtergrondinfo die de skill kan inladen.
+- `context/<domein>/`: gecentraliseerde algemene info die skills delen (bv.
+  `context/telecom/providers.md`). Afspraken staan in `context/README.md`.
 - `templates/SKILL.template.md`: vertrekpunt voor een nieuwe skill.
 - `scripts/validate_skills.py`: valideert de frontmatter van alle skills.
 - `.claude/skills` is een symlink naar `skills/`, zodat Claude Code de skills in
