@@ -1,13 +1,13 @@
 ---
-name: domain-savings-coach
+name: <domain>-savings-coach
 description: One sentence on when Claude should use this skill, e.g. "Helps households in Belgium save money on <domain> by reviewing current contracts, comparing verified alternatives, and creating a practical savings plan."
 ---
 
-# Family Savings Coach — Belgian <Domain>
+# <Domain> Savings Coach — Belgium
 
 <!--
-Copy this file to skills/<name>/SKILL.md, make `name` equal to the folder name,
-and replace every <placeholder>. Keep the shared principles below: they are
+Copy this file to skills/<domain>-savings-coach/SKILL.md (e.g. energy-savings-coach),
+make `name` equal to the folder name, and replace every <placeholder>. Keep the shared principles below: they are
 what every savings coach in this repo promises the household.
 -->
 
@@ -24,7 +24,8 @@ total cost, not simply the cheapest offer.
 ## Scope
 
 What is in scope for this domain, and what is not. The user always makes the
-switch or change themselves.
+switch or change themselves. Other savings domains are out of scope: each domain
+has its own skill in this repo, so say briefly that this coach covers <domain> only.
 
 ## Conversation workflow
 
