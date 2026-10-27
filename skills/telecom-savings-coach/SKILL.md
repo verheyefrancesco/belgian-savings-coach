@@ -107,6 +107,7 @@ Then complete the intake in three short rounds. Skip questions that do not apply
 - If TV may be reduced or dropped, ask whether the household will add paid streaming services instead, and note that cost as outside the comparison unless the user wants it included.
 - If there is a landline, ask whether it can go.
 - Ask whether all mobile numbers stay, and whether they may move to another provider or must stay together.
+- Ask whether the household prefers everything with one provider (one invoice, one contact point) or is fine with spreading services over several providers if that is cheaper. Either way, the comparison shows both (see Step 2).
 
 **Round 3 — needs** (multiple choice, one turn). Ask everything that determines which offers qualify, so no new criteria appear later:
 
@@ -134,13 +135,14 @@ If web access is available:
 2. Use `references/providers.md` to build the full set of candidate providers, so no provider is overlooked: include every provider that offers all services the household wants to keep (TV, internet, mobile). Providers marked `?` for a needed service stay candidates until checked.
 3. Then check each candidate's official website to verify prices, conditions, and availability.
 4. Always check the user's current provider too: a cheaper or better-fitting plan with the same provider is often the easiest saving (no installation, no equipment swap). Include it as a candidate when it qualifies.
-5. Check both separate plans and bundles: internet and mobile with the same provider can be cheaper than keeping them apart, and the reverse also happens.
-6. Use affiliate or comparison websites (for example Selectra, Switchr, or similar) only to find candidates. Before a plan appears in the comparison, confirm its price and conditions on the provider's official website. If that is not possible, mark the plan clearly as "unverified" and do not rank it as the best-fit option.
-7. State the date on which prices were checked and link to relevant sources.
-8. Where possible, verify whether a price is a temporary promotion, how long it lasts, the regular price afterwards, any installation or activation costs, and the applicable conditions.
-9. Do not claim that a plan is available at the user's location unless availability has been confirmed. Explain when an address-level availability check is necessary.
-10. Address-level availability checks are normally done by the user. Give the link to each provider's official availability check and say exactly what to report back: available yes/no, technology (cable, fibre, DSL, 5G), maximum speed, and the price shown. Only run the check yourself if your tools can actually fill in the form and read the result.
-11. Under every comparison, add a short "Providers checked" / "Bekeken aanbieders" line: which candidates were checked and, for each one left out, a reason in a few words (for example "no internet in this region", "only capped data", "price not verifiable"). This makes gaps visible to the user.
+5. For every candidate provider that offers all services in scope, build a one-provider scenario: all services with that provider, using its own mobile plan that meets the data need and its bundle or multi-service discount (verify the discount on the official website). Do not pair every internet offer with the same cheapest mobile plan from another provider instead.
+6. Then add at most one or two mixed scenarios (services spread over providers), only when they are cheaper than the best one-provider scenario. Name the extra price difference so the user can weigh it against the convenience of one provider.
+7. Use affiliate or comparison websites (for example Selectra, Switchr, or similar) only to find candidates. Before a plan appears in the comparison, confirm its price and conditions on the provider's official website. If that is not possible, mark the plan clearly as "unverified" and do not rank it as the best-fit option.
+8. State the date on which prices were checked and link to relevant sources.
+9. Where possible, verify whether a price is a temporary promotion, how long it lasts, the regular price afterwards, any installation or activation costs, and the applicable conditions.
+10. Do not claim that a plan is available at the user's location unless availability has been confirmed. Explain when an address-level availability check is necessary.
+11. Address-level availability checks are normally done by the user. Give the link to each provider's official availability check and say exactly what to report back: available yes/no, technology (cable, fibre, DSL, 5G), maximum speed, and the price shown. Only run the check yourself if your tools can actually fill in the form and read the result.
+12. Under every comparison, add a short "Providers checked" / "Bekeken aanbieders" line: which candidates were checked and, for each one left out, a reason in a few words (for example "no internet in this region", "only capped data", "price not verifiable"). This makes gaps visible to the user.
 
 If live web access is not available:
 - Clearly state that current prices have not been checked live.
@@ -170,7 +172,7 @@ Compare like with like. If an option includes fewer services than the current si
 
 Do not automatically rank plans by commission or lowest advertised price. Suitability and the user's total cost take priority.
 
-From the first comparison onward, present the options in the comparison table of the standard final report (one row per scenario). Each row is a complete scenario covering every service in scope: the monthly price is the household total for that scenario, never a partial price or a "from" price. Include the current situation as the first row.
+From the first comparison onward, present the options in the comparison table of the standard final report (one row per scenario). Each row is a complete scenario covering every service in scope: the monthly price is the household total for that scenario, never a partial price or a "from" price. Include the current situation as the first row. Then list the one-provider scenarios (one row per provider, cheapest first), followed by any mixed scenarios, and label each row "one provider" / "één aanbieder" or "mixed" / "gemengd". If the user said they want everything with one provider, show only one-provider scenarios and mention in one sentence how much a mixed option would save extra, if any.
 
 If the user asks about an additional provider or plan, apply the same verification, promotion, and needs rules, add it to the same table, and show the full updated table. Do not present it in a separate, partial comparison.
 
