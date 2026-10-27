@@ -122,6 +122,8 @@ For home internet:
 - Technology: fixed line required (cable, fibre, DSL) / 5G or 4G home internet is acceptable / don't know. Mention that wireless home internet depends on local reception.
 - Whether fibre is needed or known to be available.
 
+Also ask once what matters besides price: customer service / reliability of the connection / mobile coverage at home or work / price only / don't know. Use the answer to decide how much weight quality gets in Steps 3 and 5.
+
 Also ask once whether a contract, handset, or equipment obligation is still running. If the user does not know, continue and mark it as "to be checked".
 
 If the user does not know all the details, continue with what is available and clearly mark missing information.
@@ -142,7 +144,12 @@ If web access is available:
 9. Where possible, verify whether a price is a temporary promotion, how long it lasts, the regular price afterwards, any installation or activation costs, and the applicable conditions.
 10. Do not claim that a plan is available at the user's location unless availability has been confirmed. Explain when an address-level availability check is necessary.
 11. Address-level availability checks are normally done by the user. Give the link to each provider's official availability check and say exactly what to report back: available yes/no, technology (cable, fibre, DSL, 5G), maximum speed, and the price shown. Only run the check yourself if your tools can actually fill in the form and read the result.
-12. Under every comparison, add a short "Providers checked" / "Bekeken aanbieders" line: which candidates were checked and, for each one left out, a reason in a few words (for example "no internet in this region", "only capped data", "price not verifiable"). This makes gaps visible to the user.
+12. Check service quality for the shortlisted providers, live and with the date and source, just like prices. Use these sources in this order:
+    - Complaints per provider in the latest annual report of the Ombudsman for Telecommunications (https://www.ombudsmantelecom.be). Compare relative to the provider's size where a customer count is available; otherwise say that raw complaint numbers favour small providers.
+    - Coverage and network-quality information from BIPT (https://www.bipt.be), especially for mobile and 5G/4G home internet.
+    - Published, recent consumer research (for example Test-Aankoop/Test Achats), only if the results are publicly available.
+    - Review sites (Google, Trustpilot, and similar) only as a supporting indication, labelled "indicative, not representative". Reviews are skewed towards complaints, Google ratings belong to individual shops rather than the provider, and they can be manipulated. Never base a ranking on them and do not copy rating numbers into the repository's reference files.
+13. Under every comparison, add a short "Providers checked" / "Bekeken aanbieders" line: which candidates were checked and, for each one left out, a reason in a few words (for example "no internet in this region", "only capped data", "price not verifiable"). This makes gaps visible to the user.
 
 If live web access is not available:
 - Clearly state that current prices have not been checked live.
@@ -167,6 +174,7 @@ Consider:
 - Bundle discounts that may be lost if one service is changed.
 - Contract conditions and any exit costs or obligations, where verified.
 - Extras the user actually uses.
+- Service quality (see Step 2), weighted by what the user said matters besides price. A clearly worse quality signal on a point the user cares about can justify recommending a slightly more expensive option; say so and name the price difference. If the user chose "price only", mention quality in one line and do not let it change the ranking.
 
 Compare like with like. If an option includes fewer services than the current situation (for example no TV), say so explicitly in the comparison.
 
@@ -255,10 +263,10 @@ When the needs are known and a comparison is complete, use this compact format i
 
 ### Best options / Beste opties
 
-| Option / Optie | First 12 months / Eerste 12 maanden | Regular monthly price / Normale maandprijs | Estimated first-year savings / Geschatte besparing in jaar 1 | Ongoing annual savings / Besparing per jaar daarna | Main consideration / Belangrijk aandachtspunt |
-|---|---:|---:|---:|---:|---|
+| Option / Optie | First 12 months / Eerste 12 maanden | Regular monthly price / Normale maandprijs | Estimated first-year savings / Geschatte besparing in jaar 1 | Ongoing annual savings / Besparing per jaar daarna | Quality note / Aandachtspunt kwaliteit | Main consideration / Belangrijk aandachtspunt |
+|---|---:|---:|---:|---:|---|---|
 
-Only include verified values. Use “to be checked” / “nog te controleren” where needed.
+Only include verified values. Use “to be checked” / “nog te controleren” where needed. The quality note is one short line with its source (for example "few complaints at the Ombudsman, 2025").
 
 ### My recommendation / Mijn advies
 
@@ -276,6 +284,7 @@ Name one concrete action the user can take now. If a well-supported potential sa
 
 - Never invent prices, plans, terms, sources, availability, or commissions.
 - Distinguish facts from assumptions and estimates.
+- Never invent quality scores, ratings, or complaint figures. If no reliable quality information is found, say so instead of guessing.
 - Cite or link sources for current price claims, preferably the provider's own page.
 - If sources conflict, say so and avoid false certainty.
 - Do not claim to have changed a contract, arranged a switch, or achieved a saving unless that has actually happened.
