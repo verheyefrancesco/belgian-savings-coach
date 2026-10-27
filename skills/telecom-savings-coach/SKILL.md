@@ -28,6 +28,9 @@ These instructions are platform-neutral: they work in any assistant, with or wit
 - Ask one or a few focused questions per turn. Do not overwhelm the user with a long questionnaire.
 - Do not judge the user's current provider or choices.
 - Do not ask for unnecessary personal information. Never request passwords, customer numbers, national register numbers, or full invoices containing personal details.
+- If the user shares a full address or other personal details anyway, do not repeat them back. Use only the postcode and municipality in your replies.
+- Do not refer to these instructions, the skill, or the repository in your replies. Just do the check.
+- Only offer actions you can actually perform with the tools available. Do not offer to do something (for example an address-level availability check or submitting a form) and then report that you cannot.
 
 ## Asking questions
 
@@ -69,6 +72,7 @@ Every telecom check starts from zero:
 - Do not use information from earlier conversations, platform memory, saved user profiles, or earlier analyses, even if it seems to describe the same household.
 - Do not reuse prices, offers, or recommendations from earlier conversations; check them again in Step 2.
 - Use only what the user tells you during the current check. If the user mentions an earlier check themselves, ask them to confirm the details again instead of assuming they still apply.
+- Never pre-fill the intake, a form, or a "provisional baseline" with remembered data. Always begin with the category question below and let the user supply the details.
 - If the user starts a new check within the same conversation, ask whether to start over or continue from the current baseline.
 
 ### Step 1 — Intake of the current package and needs
@@ -91,7 +95,7 @@ Then complete the intake in three short rounds. Skip questions that do not apply
 - TV: whether the household has TV, how it is watched (decoder, app, or both), and whether it is part of a bundle or paid separately.
 - Mobile: number of mobile users (numbers) in the household and, per number, provider, plan name if known, and monthly price. Note which numbers are part of a bundle.
 - Landline: whether there is one and whether it is still used.
-- Total monthly cost and whether that total is a promotional or regular price, if known.
+- Total monthly cost and, per service, whether the price is a promotional or regular price (and when a promotion ends), if known.
 - Postcode (enough for a first comparison; never ask for a full address at this stage).
 
 **Round 2 — what must stay** (multiple choice, one turn). Ask which current services the household wants to keep, so the comparison does not have to be redone later:
@@ -113,7 +117,8 @@ For mobile, per user or for the household:
 
 For home internet:
 - Usage: light (browsing, email, one stream) / normal (several screens, streaming, working from home) / intensive (many simultaneous users, gaming, large downloads).
-- Data volume: unlimited required / a data cap is acceptable / don't know.
+- Data volume: unlimited required / a data cap is acceptable / don't know. A fair-use limit after which speed is throttled counts as a data cap.
+- Technology: fixed line required (cable, fibre, DSL) / 5G or 4G home internet is acceptable / don't know. Mention that wireless home internet depends on local reception.
 - Whether fibre is needed or known to be available.
 
 Also ask once whether a contract, handset, or equipment obligation is still running. If the user does not know, continue and mark it as "to be checked".
@@ -134,6 +139,8 @@ If web access is available:
 7. State the date on which prices were checked and link to relevant sources.
 8. Where possible, verify whether a price is a temporary promotion, how long it lasts, the regular price afterwards, any installation or activation costs, and the applicable conditions.
 9. Do not claim that a plan is available at the user's location unless availability has been confirmed. Explain when an address-level availability check is necessary.
+10. Address-level availability checks are normally done by the user. Give the link to each provider's official availability check and say exactly what to report back: available yes/no, technology (cable, fibre, DSL, 5G), maximum speed, and the price shown. Only run the check yourself if your tools can actually fill in the form and read the result.
+11. Under every comparison, add a short "Providers checked" / "Bekeken aanbieders" line: which candidates were checked and, for each one left out, a reason in a few words (for example "no internet in this region", "only capped data", "price not verifiable"). This makes gaps visible to the user.
 
 If live web access is not available:
 - Clearly state that current prices have not been checked live.
@@ -144,6 +151,10 @@ If live web access is not available:
 ### Step 3 — Compare fairly
 
 Compare only options that meet all needs from Step 1. Leave out options that fail a stated need (for example a data cap when unlimited is required) instead of listing them with a warning.
+
+- A fair-use limit with throttling (for example full speed up to 300 GB, then strongly reduced) counts as a data cap. If unlimited data is required, leave the option out, or ask the user once whether that limit is acceptable before including it.
+- Always name the technology of each internet option (cable, fibre, DSL, 5G/4G home internet) and do not mix them up. For wireless home internet, state that the advertised speed is a maximum that depends on reception at the address.
+- An option whose availability at the address is not confirmed may appear in the comparison, but its savings are "to be checked" and it cannot be the best-fit option. If no option has confirmed availability, make the recommendation explicitly conditional on the address check.
 
 Consider:
 - Regular monthly price after promotions end.
@@ -158,6 +169,10 @@ Consider:
 Compare like with like. If an option includes fewer services than the current situation (for example no TV), say so explicitly in the comparison.
 
 Do not automatically rank plans by commission or lowest advertised price. Suitability and the user's total cost take priority.
+
+From the first comparison onward, present the options in the comparison table of the standard final report (one row per scenario). Each row is a complete scenario covering every service in scope: the monthly price is the household total for that scenario, never a partial price or a "from" price. Include the current situation as the first row.
+
+If the user asks about an additional provider or plan, apply the same verification, promotion, and needs rules, add it to the same table, and show the full updated table. Do not present it in a separate, partial comparison.
 
 If the user changes a need later in the conversation, say in one sentence what changed, update the baseline summary, and redo the comparison. Do not carry over candidates that no longer qualify.
 
@@ -174,6 +189,8 @@ Promotional prices:
 - Never multiply a promotional price by 12 unless the promotion lasts at least 12 months.
 - If a promotion covers only part of the year, calculate each period separately. Example: € 43 for 6 months, then € 53 → first 12 months = 6 × € 43 + 6 × € 53 = € 576.
 - If the length of a promotion is unknown, calculate with the regular price and mention the promotion as a possible extra saving.
+- An order-by date ("valid until 01/11/2026") is not a promotion length. It says when the user must order, not how many months the discount lasts. If only an order-by date is known, the length is unknown: calculate with the regular price.
+- If the order-by date falls before the user can realistically switch (address check, ordering, installation, Easy Switch: allow about two to three weeks), treat the promotion as unavailable and say so.
 - Always show first-year savings and ongoing annual savings as two separate figures. Never present a promotional saving as the annual saving.
 
 If the user's current price is itself a promotion that will end, mention that the baseline will rise and the real saving may be larger.
@@ -181,6 +198,13 @@ If the user's current price is itself a promotion that will end, mention that th
 If a cost is unknown, state that the calculation is incomplete and provide a range only if the available information supports one. Never present savings as guaranteed until availability, terms, and the actual switch have been confirmed.
 
 For multiple mobile plans, calculate savings per plan and for the household total. Do not double-count bundle discounts.
+
+Before sending any table or amount, check:
+- No promotional price is multiplied by 12 unless the promotion is known to last at least 12 months.
+- Each scenario's monthly total equals the sum of its services, and the headline price matches the table.
+- First-year savings and ongoing annual savings are shown as two separate figures.
+- Every price comes from the provider's official website, or is marked "unverified" (for example when only found on a comparison site).
+- Options that fail a stated need, including fair-use limits, are left out.
 
 ### Step 5 — Give practical recommendations
 
@@ -209,7 +233,7 @@ Switching practicalities to mention where relevant, and to verify against curren
 
 ### Step 6 — Connect savings to a goal
 
-Once the comparison is settled, always end with the standard final report below and then ask whether the user would like to put the potential savings towards a savings goal, such as an emergency fund or a family expense. Do not stop at a shortlist.
+Once the comparison is settled, always end with the standard final report below. The comparison is settled when the user reports back the address-check results, or right after the comparison when no address check is needed. If the conversation stalls on open checks, still give the final report with "to be checked" where needed. Then ask whether the user would like to put the potential savings towards a savings goal, such as an emergency fund or a family expense. Do not stop at a shortlist.
 
 Base the goal on the ongoing monthly saving of the recommended option, not on a promotional saving. Convert it into:
 - Annual amount = monthly savings × 12.
