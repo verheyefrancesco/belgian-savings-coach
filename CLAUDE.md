@@ -21,6 +21,9 @@ Er is (nog) geen applicatiecode: de "code" zijn de skill-instructies in Markdown
   Optioneel `references/` voor achtergrondinfo die de skill kan inladen.
 - `context/<domein>/`: gecentraliseerde algemene info die skills delen (bv.
   `context/telecom/providers.md`). Afspraken staan in `context/README.md`.
+  Een skill gebruikt context via een symlink in zijn `references/` (bv.
+  `skills/telecom-savings-coach/references/providers.md`), zodat er één bron is
+  en het bestand mee in de zip zit bij uploaden. De validatie faalt op kapotte links.
 - `templates/SKILL.template.md`: vertrekpunt voor een nieuwe skill.
 - `scripts/validate_skills.py`: valideert de frontmatter van alle skills.
 - `.claude/skills` is een symlink naar `skills/`, zodat Claude Code de skills in

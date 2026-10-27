@@ -23,5 +23,8 @@ context/
   CREG/VREG voor energie).
 - Geen prijzen hier: die veranderen te snel en horen live geverifieerd te worden.
 - Onzeker of niet bevestigd? Markeer het expliciet (`?`) in plaats van te gokken.
+- Een skill neemt een contextbestand mee via een symlink in
+  `skills/<naam>/references/`. Hernoem of verplaats je een bestand, pas dan ook
+  die link aan (de validatie vangt kapotte links op).
 - Skill-specifieke info blijft in `skills/<naam>/references/`; wat meerdere
   skills nodig hebben, hoort hier.

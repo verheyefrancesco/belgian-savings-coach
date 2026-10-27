@@ -7,6 +7,7 @@ Checks the YAML frontmatter that Claude needs to load a skill:
 - `name` follows the repo convention `<domain>-savings-coach`
 - `description` is present and at most 1024 characters
 - the body below the frontmatter is not empty
+- every symlink inside the skill folder (e.g. into context/) resolves
 
 Uses only the standard library so it runs without installing anything.
 Exit code 0 means all skills are valid.
@@ -76,6 +77,10 @@ def validate_skill(skill_file):
 
     if not body.strip():
         errors.append("skill body is empty")
+
+    for path in sorted(skill_file.parent.rglob("*")):
+        if path.is_symlink() and not path.exists():
+            errors.append(f"broken link {path.relative_to(skill_file.parent)}")
     return errors
 
 
